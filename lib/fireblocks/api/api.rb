@@ -59,6 +59,14 @@ module Fireblocks
       def get_supported_assets
         Request.get(path: '/v1/supported_assets')
       end
+
+      def get_transactions
+        Request.get(path: '/v1/transactions')
+      end
+
+      def get_transaction(transaction_id)
+        Request.get(path: "/v1/transactions/#{transaction_id}")
+      end
     end
   end
 end
